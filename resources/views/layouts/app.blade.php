@@ -58,7 +58,10 @@
                 </section>
                 <ul class="list-unstyled components" id="test">
                     <li class="active">
-                        <router-link to="/">Trang Chủ</>
+                        <router-link to="/">Trang Chủ</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/developer">Developer</router-link>
                     </li>
                     @can('isAdmin')
                     <li>
