@@ -14,10 +14,4 @@ Auth::routes();
 Route::get('/user-info', function(){
   dd(auth()->user());
 });
-// Route::group(['middleware' => ['auth']], function () {
-//   //handle hashbang in VueJS
-//   Route::get('{path}', function() {
-//     return view('layouts.app');
-//   })->where('path', '.*');
-// });
 Route::get('{path}', "HomeController@index")->where( 'path', '([A-z\d-\/_.]+)?' );

@@ -107,7 +107,7 @@
 
     </div>
 
-    <div v-else>
+    <div class="mb-5" v-else>
         <not-found></not-found>
     </div>
 </div>

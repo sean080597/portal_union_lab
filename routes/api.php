@@ -48,6 +48,6 @@ Route::get('/getRelationsByStuId/{student_id}', 'API\StudentController@getRelati
 //get role
 Route::get('/indexWithoutSchoolLeaderAccs', 'API\RoleController@indexWithoutSchoolLeaderAccs');
 Route::get('/allblahblah', function(){
-    dd(auth('api')->user());
+    dd(auth()->user('api'));
     return Student::where('class_room_id', '15DTH12')->latest()->get()->chunk(50);
 });

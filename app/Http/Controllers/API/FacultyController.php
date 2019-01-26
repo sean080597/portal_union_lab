@@ -22,8 +22,9 @@ class FacultyController extends Controller
      */
     public function index()
     {
+        // $this->authorize('isAdmin');
         return Faculty::with('secretary')->orderBy('name', 'ASC')->paginate(10);
-        // if (Gate::allows('isShit', Auth::user())) {
+        // if (Gate::allows('isAccFaculty')) {
         //     return Faculty::with('secretary')->orderBy('name', 'ASC')->paginate(10);
         // }else{
         //     abort(403);
